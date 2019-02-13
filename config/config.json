@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "chico",
-    "password": "Guanac0331!",
+    "username": "",
+    "password": "",
     "port": 3306,
     "database": "exampledb",
     "host": "localhost",
