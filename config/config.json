@@ -1,17 +1,18 @@
 {
   "development": {
-    "username": "",
-    "password": "",
+    "username": "chico",
+    "password": "Guanac0331!",
     "port": 3306,
-    "database": "exampledb",
+    "database": "superheroesdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "chico",
+    "password": "Guanac0331!",
     "database": "testdb",
     "host": "localhost",
+    "port": 3306,
     "dialect": "mysql",
     "logging": false
   },
