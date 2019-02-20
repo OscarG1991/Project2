@@ -1,0 +1,77 @@
+<body>
+   ​
+   <div class="container">
+      <div class="jumbotron">
+         <h1>Superhero</h1>
+         <h3>Battle Marvel and DC Royale</h3>
+         <hr>
+         <a href="/addCharacter"><button class="btn btn-danger btn-lg"><span class="fa fa-plus"></span> Add New
+               Character</button></a>
+      </div>
+         ​
+         <div class="col-md-8">
+            ​
+            <div class="card mb-4">
+               <div class="card-header">
+                  <h3><strong>Character Search</strong></h3>
+               </div>
+               <div class="card-body">
+                  <input type="text" id="character-search" class="form-control">
+                  <br>
+                  <div class="text-right">
+                     <button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="fa fa-search"></span>
+                        Search</button>
+                     ​
+                  </div>
+               </div>
+            </div>
+            ​
+            <div id="scrollable">
+               <div class="character-container"></div>
+            </div>
+
+         </div>
+    
+
+   </div>
+
+   ​<style>
+      .character-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+#scrollable {
+overflow:scroll; 
+height:200px;
+}
+</style>
+   <script type="text/javascript">
+      $("#search-btn").on("click", function () {
+         var searchedCharacter = $("#character-search").val().trim();​
+         searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();​
+         $.get("http://localhost:8080/api/characters" + searchedCharacter, function (data) {
+            console.log(data);
+            if (data) {
+               $("#stats").show();
+               $("#name").text(data.name);
+               $("abilities").text(data.abilities);
+               $("weapons").text(data.weapons);
+               $("origin").text(data.origin);
+               $("appearance").text(data.appearance);
+               $("affiliations").text(data.affiliations);
+               $("#strength").text(data.strength);
+               $("#health").text(data.healthPoints);
+            } else {
+               $("#name").text("Your character was not found.");
+               $("#stats").hide();
+            }
+         });
+      });
+   </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+   <script src="js/character.js" type="text/javascript"></script>
+
+</body>
+​
+

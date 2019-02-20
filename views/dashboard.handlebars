@@ -1,10 +1,70 @@
 {{!-- PASSPORT: This is the user dashboard that the user gets redirected to after signing in.  You can rename this to whatever you want from dashboard --}}
-<div class="container">
-    <div class="row">
-        <div class="col-8">
-            <h2>Dashboard</h2>
-            <h5>Hurray! you are logged in.</h5>
-            <a href="/">Continue -></a>
+    <div class="container">
+        <div id="leftside">
+            <div class="card">
+                <div class="card-header">
+                    Leaderboard
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Rank 1: </li>
+                    <li class="list-group-item">Rank 2:</li>
+                    <li class="list-group-item">Rank 3:</li>
+                    <li class="list-group-item">Rank 4: </li>
+                    <li class="list-group-item">Rank 5:</li>
+                    <li class="list-group-item">Rank 6:</li>
+                    <li class="list-group-item">Rank 7: </li>
+                    <li class="list-group-item">Rank 8:</li>
+                    <li class="list-group-item">Rank 9:</li>
+                    <li class="list-group-item">Rank 10: </li>
+                </ul>
+            </div>
+        </div>
+        <div id="rightside">
+            <div id="scrollable">
+                <div class="blog-container">
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class="card text-center">
+                    <strong>
+                        <div class="card-chatbox">
+                            CHATBOX
+                        </div>
+                    </strong>
+                    <div class="chatbox" id="scrollable">
+                        <ul id="messages"></ul>
+                        <form id="chat" action="">
+                            <input id="m" autocomplete="off" /><button>Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="js/newsfeed.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            var socket = io();
+            $('#chat').submit(function () {
+                socket.emit('chat message', $('#m').val());
+                $('#m').val('');
+                return false;
+            });
+            socket.on('chat message', function (msg) {
+                $('#messages').append($('<li>').text(msg)).appendTo('#chatbox');
+                console.log("message fired");
+                window.scrollTo(0, document.body.scrollHeight);
+            });
+        });
+    </script>
+    <footer>
+        <p class="bottom"><i class="fab fa-github">Carlo</i> | <i class="fab fa-github">Ben</i> | <i class="fab fa-github">Matt</i>
+            | <i class="fab fa-github">Oscar</i></p>
+    </footer>
