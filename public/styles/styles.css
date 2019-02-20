@@ -5,3 +5,136 @@
 .navbar {
   margin-bottom: 40px;
 }
+
+.nav {
+  background-color: slategray;
+}
+
+a {
+color: white;
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+
+}
+
+#scrollable {
+overflow:scroll; 
+height:200px;
+}
+
+footer {
+  text-align: center;
+  text-align: bottom;
+}
+
+button.submit {
+  float: right;
+}
+
+form#cms {
+  margin-top: 50px;
+}
+
+#cms textarea {
+  resize: none;
+}
+
+.card-header button.delete,
+button.edit {
+  float: right;
+  margin: 5px;
+}
+
+.card-header button.edit {
+  background-color: white;
+}
+
+.card {
+    background-color: slategray;
+}
+
+.card-body {
+    background-color: white;
+}
+
+#leftside {
+  width: 300px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.character-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 13px Helvetica, Arial;
+}
+
+form {
+  background: #000;
+  padding: 3px;
+  bottom: 0;
+  width: 100%;
+}
+
+form input {
+  border: 0;
+  padding: 10px;
+  width: 30%;
+  margin-right: .5%;
+}
+
+form button {
+  width: 100%;
+  background: rgb(130, 224, 255);
+  border: none;
+  padding: 10px;
+}
+
+label {
+  color: white;
+}
+
+#messages {
+  list-style-type: none;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#messages li {
+  width: 50%;
+  padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+  width: 100%;
+  background: #eee;
+}
+
+#messages {
+  width: 100%;
+  margin-bottom: 40px;
+  /* text-wrap:  */
+
+}

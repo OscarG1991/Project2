@@ -60,6 +60,36 @@ module.exports = (app, passport) => {
         logout: logout
       });
     });
+
+     app.get("/cms", isLoggedIn, (req, res) => {
+      let logout = false;
+      if (req.user) {
+        logout = true;
+      }
+      res.render("cms", {
+        logout: logout
+      });
+    });
+
+    app.get("/characters", isLoggedIn, (req, res) => {
+      let logout = false;
+      if (req.user) {
+        logout = true;
+      }
+      res.render("characters", {
+        logout: logout
+      });
+    });
+  
+   app.get("/addCharacter", isLoggedIn, (req, res) => {
+      let logout = false;
+      if (req.user) {
+        logout = true;
+      }
+      res.render("addCharacter", {
+        logout: logout
+      });
+    });
   
     // Passport function that checks if the user is logged in or not.  If not then it redirects them to the signin page
     function isLoggedIn(req, res, next) {
