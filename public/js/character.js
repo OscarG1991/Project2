@@ -26,10 +26,9 @@ $(document).ready(function() {
     $.ajax({
       method: "DELETE",
       url: "/api/characters/" + id
-    })
-      .then(function() {
-        getCharacters();
-      });
+    }).then(function() {
+      getCharacters();
+    });
   }
 
   // Getting the initial list of posts
@@ -46,7 +45,7 @@ $(document).ready(function() {
   }
 
   // This function constructs a post's HTML
-  function createNewRow(character) {
+  function createNewRow(superHero) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
     var newPostCardHeading = $("<div>");
@@ -67,16 +66,14 @@ $(document).ready(function() {
     var newPostAffiliations = $("<p>");
     var newPostStrength = $("<p>");
     var newPostHealth = $("<p>");
-    newPostName.text("Name: " + character.name);
-    newPostAbilities.text("Abilities: " + character.abilities);
-    newPostWeapons.text("Weapons: " + character.weapons);
-    newPostOrigin.text("Place of Origin: " + character.placeofOrigin);
-    newPostAppearance.text("First Appearance: " + character.firstAppearance);
-    newPostAffiliations.text("Team Affiliations: " + character.teamAffiliations);
-    newPostStrength.text("Strength: " + character.strength);
-    newPostHealth.text("Health: " + character.healthpoints);
-    
-    
+    newPostName.text("Name: " + superHero.name);
+    newPostAbilities.text("Abilities: " + superHero.abilities);
+    newPostWeapons.text("Weapons: " + superHero.weapons);
+    newPostOrigin.text("Place of Origin: " + superHero.placeOfOrigin);
+    newPostAppearance.text("First Appearance: " + superHero.firstAppearance);
+    newPostAffiliations.text("Team Affiliations: " + superHero.teamAffiliations);
+    newPostStrength.text("Strength: " + superHero.strength);
+    newPostHealth.text("Health: " + superHero.healthpoints);
     newPostCardHeading.append(deleteBtn);
     newPostCardHeading.append(editBtn);
     newPostCardHeading.append(newPostName);
@@ -89,7 +86,7 @@ $(document).ready(function() {
     newPostCardBody.append(newPostHealth);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
-    newPostCard.data("character", character);
+    newPostCard.data("superHero", superHero);
     return newPostCard;
   }
 
@@ -99,7 +96,7 @@ $(document).ready(function() {
     var currentCharacter = $(this)
       .parent()
       .parent()
-      .data("character");
+      .data("superHero");
     deleteCharacter(currentCharacter.id);
   }
 
@@ -109,7 +106,7 @@ $(document).ready(function() {
     var currentCharacter = $(this)
       .parent()
       .parent()
-      .data("character");
+      .data("superHero");
     window.location.href = "/addCharacter?character_id=" + currentCharacter.id;
   }
 

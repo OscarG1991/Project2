@@ -49,18 +49,18 @@ height:200px;
       $("#search-btn").on("click", function () {
          var searchedCharacter = $("#character-search").val().trim();​
          searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();​
-         $.get("http://localhost:8080/api/characters" + searchedCharacter, function (data) {
+         $.get("http://localhost:3000/api/characters" + searchedCharacter, function (data) {
             console.log(data);
             if (data) {
                $("#stats").show();
                $("#name").text(data.name);
                $("abilities").text(data.abilities);
                $("weapons").text(data.weapons);
-               $("origin").text(data.origin);
-               $("appearance").text(data.appearance);
-               $("affiliations").text(data.affiliations);
+               $("#placeOfOrigin").text(data.placeOfOrigin);
+               $("#firstAppearance").text(data.firstAppearance);
+               $("#teamAffiliations").text(data.teamAffiliations);
                $("#strength").text(data.strength);
-               $("#health").text(data.healthPoints);
+               $("#healthpoints").text(data.healthPoints);
             } else {
                $("#name").text("Your character was not found.");
                $("#stats").hide();

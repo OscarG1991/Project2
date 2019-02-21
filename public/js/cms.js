@@ -27,7 +27,7 @@ $(document).ready(function() {
     // Constructing a newPost object to hand to the database
     var newPost = {
       title: titleInput.val().trim(),
-      body: bodyInput.val().trim(),
+      body: bodyInput.val().trim()
     };
 
     console.log(newPost);
@@ -37,8 +37,7 @@ $(document).ready(function() {
     if (updating) {
       newPost.id = postId;
       updatePost(newPost);
-    }
-    else {
+    } else {
       submitPost(newPost);
     }
   });
@@ -46,7 +45,7 @@ $(document).ready(function() {
   // Submits a new post and brings user to blog page upon completion
   function submitPost(Post) {
     $.post("/api/newsfeed/", Post, function() {
-      window.location.href = "/home";
+      window.location.href = "/dashboard";
     });
   }
 
@@ -70,9 +69,8 @@ $(document).ready(function() {
       method: "PUT",
       url: "/api/newsfeed",
       data: post
-    })
-      .then(function() {
-        window.location.href = "/home";
-      });
+    }).then(function() {
+      window.location.href = "/dashboard";
+    });
   }
 });
