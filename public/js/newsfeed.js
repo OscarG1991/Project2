@@ -10,7 +10,7 @@ $(document).ready(function() {
   // This function grabs posts from the database and updates the view
   function getPosts() {
    
-    $.get("/api/newsfeed", function(data) {
+    $.get("/api/newsfeed/", function(data) {
       console.log("Posts", data);
       posts = data;
       if (!posts || !posts.length) {

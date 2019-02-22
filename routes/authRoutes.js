@@ -90,6 +90,7 @@ module.exports = (app, passport) => {
         logout: logout
       });
     });
+
   
     // Passport function that checks if the user is logged in or not.  If not then it redirects them to the signin page
     function isLoggedIn(req, res, next) {

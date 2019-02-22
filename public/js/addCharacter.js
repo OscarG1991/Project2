@@ -36,11 +36,11 @@ $(document).ready(function() {
       name: charName.val().trim(),
       abilities: charAbilities.val().trim(),
       weapons: charWeapons.val().trim(),
-      origin: charOrigin.val().trim(),
-      appearance: charAppearance.val().trim(),
-      affiliations: charAffiliations.val().trim(),
+      placeOfOrigin: charOrigin.val().trim(),
+      firstAppearance: charAppearance.val().trim(),
+      teamAffiliations: charAffiliations.val().trim(),
       strength: charStrength.val().trim(),
-      health: charHealth.val().trim()
+      healthpoints: charHealth.val().trim()
     };
 
     console.log(newCharacter);
@@ -67,15 +67,14 @@ $(document).ready(function() {
   function getCharacterData(id) {
     $.get("/api/characters/" + id, function(data) {
       if (data) {
-        // If this post exists, prefill our cms forms with its data
         charName.val(data.name);
         charAbilities.val(data.abilities);
         charWeapons.val(data.weapons);
-        charOrigin.val(data.weapons);
-        charAppearance.val(data.appearance);
-        charAffiliations.val(data.affiliations);
+        charOrigin.val(data.placeOfOrigin);
+        charAppearance.val(data.firstAppearance);
+        charAffiliations.val(data.teamAffiliations);
         charStrength.val(data.strength);
-        charHealth.val(data.health);
+        charHealth.val(data.healthpoints);
         // If we have a post with this id, set a flag for us to know to update the post
         // when we hit submit
         updating = true;
@@ -83,15 +82,13 @@ $(document).ready(function() {
     });
   }
 
-  // Update a given post, bring user to the blog page when done
   function updateCharacters(character) {
     $.ajax({
       method: "PUT",
       url: "/api/characters",
       data: post
-    })
-      .then(function() {
-        window.location.href = "/characters";
-      });
+    }).then(function() {
+      window.location.href = "/characters";
+    });
   }
 });
