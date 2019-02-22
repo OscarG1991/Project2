@@ -1,4 +1,118 @@
-.list-group-item {
+nav ul a,
+nav .brand-logo {
+  font-weight: bold;
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+/* .span-card-title {
+    color: black;
+} */
+
+.sidenav-trigger {
+  color: rgb(107, 3, 3);
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #home-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #home-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+}
+
+.bgimg {
+  /* Background image */
+  background-image: url("../images/sLee-1.jpg");
+  /* Full-screen */
+  height: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a black text color to all elements inside the .bgimg container */
+  color: whitesmoke;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the top-left corner */
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+/* .list-group-item {
   line-height: 2.5;
 }
 
@@ -135,6 +249,6 @@ label {
 #messages {
   width: 100%;
   margin-bottom: 40px;
-  /* text-wrap:  */
+  text-wrap: 
 
-}
+} */

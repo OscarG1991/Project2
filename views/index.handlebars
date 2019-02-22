@@ -4,30 +4,170 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
       </div>
     </div>
   </div>
 </div>
+
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <h1 class="header center blue-text text-lighten-2">Icarus</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">An app to store your favorite comic book characters and battle it
+          out
+          with other users</h5>
+      </div>
+      {{!-- <div class="row center"> --}}
+      <p class="center-align">
+        {{!-- <a href="./sampleLogin.html" id="login-button" class="btn-large waves-effect waves-light blue lighten-1">Login</a> --}}
+        {{#if logout}}
+        <span class="navbar-text">
+          <a href="/logout" id="logout-button" class="btn-large waves-effect waves-light blue lighten-1">Logout</a>
+        </span>
+        {{else}}
+        <span class="navbar-text">
+          <a href="/signin" id="signin-button" class="btn-large waves-effect waves-light blue lighten-1">Login</a>
+        </span>
+        <span class="navbar-text">
+          <a href="/signup" id="signup-button" class="btn-large waves-effect waves-light blue lighten-1">Sign Up</a>
+        </span>
+        {{/if}}
+      </p>
+
+      {{!-- </div> --}}
+      <br><br>
+
+    </div>
+  </div>
+  <div class="parallax"><img src="./images/Marvel-Banner-4a.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+
+<div class="container">
+  <div class="section">
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class="material-icons">group</i></h2>
+          <h4 class="center header">Leaderboard</h4>
+          <br>
+          <div class="card horizontal">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Rank 1:</li>
+              <li class="list-group-item">Rank 2:</li>
+              <li class="list-group-item">Rank 3:</li>
+              <li class="list-group-item">Rank 4: </li>
+              <li class="list-group-item">Rank 5:</li>
+              <li class="list-group-item">Rank 6:</li>
+              <li class="list-group-item">Rank 7:</li>
+              <li class="list-group-item">Rank 8:</li>
+              <li class="list-group-item">Rank 9:</li>
+              <li class="list-group-item">Rank 10:</li>
+            </ul>
+          </div>
+          <div class="card-stacked">
+            {{!-- <div class="card-content">
+                                <p>Battle your way to the top of the Leaderboard.</p>
+                            </div> --}}
+            <button class="btn blue-waves-effect waves-light" type="submit" name="action">User Profile
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="icon-block">
+          <h2 class="center blue-text"><i class="material-icons">message</i></h2>
+          <h4 class="center header">New Blog Entry</h4>
+          <form id="cms">
+            </h2>
+            </h2>
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" class="form-control" id="title">
+              <br />
+              <label for="body">Body:</label>
+              <textarea class="form-control" rows="15" id="body"></textarea>
+              <br />
+              <button class="btn blue-waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Add your favorite characters to your vault or create your own
+          characters</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="./images/Marvel-Banner-2a.jpg" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="./images/Marvel-Banner.jpg">
+            <span class="card-title">Add New Character</span>
+            <a class="btn-floating halfway-fab waves-effect waves-light red" href="/characters" target="_blank"><i
+                class="material-icons">add</i></a>
+          </div>
+          <div class="card-content">
+            <p>Unlock new characters to add to your Hero Vault. Battle others to level up!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="./images/sketch-3.jpg">
+            <span class="card-title">Create New Character</span>
+            <a class="btn-floating halfway-fab waves-effect waves-light red" href="/addCharacter"
+              target="_blank"><i class="material-icons">create</i></a>
+          </div>
+          <div class="card-content">
+            <p>Create custom characters to add to your Hero Vault. Battle others to level up!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="row center">
+        <h5 class="header col s12 light">Chatbox - chat with other users when logged in and talk smack when
+          battling</h5>
+      </div>
+    </div>
+  </div>
+  <div class="parallax"><img src="./images/Marvel-Banner-3a.jpg" alt="Unsplashed background img 3"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./parallax-template/js/materialize.min.js"></script>
+<script src="./parallax-template/js/init.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
