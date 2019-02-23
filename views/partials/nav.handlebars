@@ -1,4 +1,60 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="red" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="/" class="brand-logo">Icarus</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/">Home</a></li>
+                <!-- <li><a href="./sampleUser.html" target="_blank">User Profile</a></li> -->
+                <li><a href="/dashboard">User Dashboard</a></li>
+                <li><a href="/cms">Add Newspost</a></li>
+                <li><a href="/characters">Characters</a></li>
+                
+                {{#if logout}}
+                <span class="navbar-text">
+                <a class="nav-link" href="/logout">Logout</a>
+                </span>
+                {{else}}
+                <span class="navbar-text">
+                <a class="nav-link" href="/signin">Login</a>
+                </span>
+                <span class="navbar-text">
+                <a class="nav-link" href="/signup">Sign Up</a>
+                </span>
+                {{/if}}
+                
+            </ul>
+            
+            <ul id="nav-mobile" class="sidenav">
+                <li>
+                  {{#if logout}}
+                  <span class="navbar-text">
+                  <a class="nav-link" href="/logout">Logout</a>
+                  </span>
+                  {{else}}
+                  <span class="navbar-text">
+                  <a class="nav-link" href="/signin">Login</a>
+                  </span>
+                  <span class="navbar-text">
+                  <a class="nav-link" href="/signup">Sign Up</a>
+                  </span>
+                  {{/if}}
+                </li>
+                <li><a href="/">Home</a></li>
+                <!-- <li><a href="./sampleUser.html" target="_blank">User Profile</a></li> -->
+                <li><a href="/dashboard">User Dashboard</a></li>
+                <li><a href="/cms">Add Newspost</a></li>
+                <li><a href="/characters">Characters</a></li>
+
+                
+                
+            </ul>
+            
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            
+        </div>
+        
+    </nav>
+
+{{!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="/">My App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,4 +88,4 @@
     </span>
     {{/if}}
   </div>
-</nav>
+</nav> --}}
