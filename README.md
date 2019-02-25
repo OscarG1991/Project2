@@ -9,6 +9,10 @@ A battle game where two on-screen characters fight each other, logging the users
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+Clone Repository: ```git clone``` https://github.com/OscarG1991/Project2
+
+GitHub Link: https://github.com/OscarG1991/Project2
+
 ### Prerequisites
 
 What things you need to install the software and how to install them
@@ -57,7 +61,7 @@ Give an example
 
 ## Deployment
 
-Heroku - ????
+Heroku - https://whispering-castle-93484.herokuapp.com/
 
 ## Built With
 |  |  |  |  | 
