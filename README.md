@@ -60,38 +60,14 @@ Give an example
 Heroku - ????
 
 ## Built With
-
-* [Materialize](https://materializecss.com/getting-started.html)
-* [Bootstrap](https://getbootstrap.com/)
-* [Font Awesome](https://fontawesome.com/?from=io)
-* [Fonts.Google APIs](https://developers.google.com/fonts/docs/getting_started)
-* [jQuery](https://jquery.com/download/)
-* [Popper.js](https://popper.js.org/popper-documentation.html)
-* [Moment](https://momentjs.com/)
-* [Node.js](https://nodejs.org/en/download/)
-* [Body-Parser](https://www.npmjs.com/package/body-parser)
-* [dotenv](https://www.npmjs.com/package/dotenv)
-* [Express](https://expressjs.com/en/starter/installing.html)
-* [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
-* [Express-session](https://www.npmjs.com/package/express-session)
-* [Inquirer](https://www.npmjs.com/package/inquirer/v/0.2.3)
-* [MySQL2](https://www.npmjs.com/package/mysql2)
-* [Nodemon](https://nodemon.io/)
-* [Passport](https://www.npmjs.com/package/passport)
-* [Passport-Local](https://www.npmjs.com/package/passport-local)
-* [Sequelize](https://www.npmjs.com/package/sequelize)
-* [Chai](https://www.chaijs.com/)
-* [Chai-http](https://www.chaijs.com/plugins/chai-http/)
-* [Cross-env](https://www.npmjs.com/package/cross-env)
-* [EsLint](https://eslint.org/docs/user-guide/getting-started)
-* [EsLint-config-prettier](https://eslint.org/docs/user-guide/configuring)
-* [EsLint-plugin-prettier](https://prettier.io/docs/en/eslint.html)
-* [Mocha](https://mochajs.org/#installation)
-* [Prettier](https://www.npmjs.com/package/prettier)
-* [Socket.io](https://socket.io/get-started/chat/) - COMING SOON
-
-* [????](https://maven.apache.org/) - Dependency Management
-* [????](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+|  |  |  |  | 
+| --- | --- | --- | --- |
+| [Materialize](https://materializecss.com/getting-started.html) | [Bootstrap](https://getbootstrap.com/) | [Font Awesome](https://fontawesome.com/?from=io) | [Fonts.Google APIs](https://developers.google.com/fonts/docs/getting_started) | [jQuery](https://jquery.com/download/) |
+| [Popper.js](https://popper.js.org/popper-documentation.html) | [Moment](https://momentjs.com/) | [Node.js](https://nodejs.org/en/download/) | [Body-Parser](https://www.npmjs.com/package/body-parser) | [dotenv](https://www.npmjs.com/package/dotenv) |
+| [Express](https://expressjs.com/en/starter/installing.html) | [Express-handlebars](https://www.npmjs.com/package/express-handlebars) | [Express-session](https://www.npmjs.com/package/express-session) | [Inquirer](https://www.npmjs.com/package/inquirer/v/0.2.3) | [MySQL2](https://www.npmjs.com/package/mysql2) | 
+| [Nodemon](https://nodemon.io/) | [Passport](https://www.npmjs.com/package/passport) | [Passport-Local](https://www.npmjs.com/package/passport-local) | [Sequelize](https://www.npmjs.com/package/sequelize) | [Chai](https://www.chaijs.com/) |
+| [Chai-http](https://www.chaijs.com/plugins/chai-http/) | [Cross-env](https://www.npmjs.com/package/cross-env) | [EsLint](https://eslint.org/docs/user-guide/getting-started) | [EsLint-config-prettier](https://eslint.org/docs/user-guide/configuring) | [EsLint-plugin-prettier](https://prettier.io/docs/en/eslint.html) |
+| [Mocha](https://mochajs.org/#installation) | [Prettier](https://www.npmjs.com/package/prettier)| [Socket.io](https://socket.io/get-started/chat/) - COMING SOON |
 
 ## Contributing
 
