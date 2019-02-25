@@ -9,8 +9,8 @@ const exphbs = require("express-handlebars");
 const db = require("./models");
 
 const app = express();
-const http = require("http").Server(app);
-var io = require("socket.io")(http);
+// const http = require("http").Server(app);
+// var io = require("socket.io")(http);
 const PORT = process.env.PORT || 3000;
 
 // PASSPORT: imports passport and express-session used with passport
@@ -52,16 +52,19 @@ const models = require("./models");
 require("./routes/authRoutes")(app, passport); // PASSPORT: auth routes used with passport
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
-});
+
 
 // PASSPORT: load passport strategies
 require("./config/passport.js")(passport, models.user);
+// io.on('connection', function(socket){
+//   socket.on('chat message', function(msg){
+//     io.emit('chat message', msg);
+//   });
+// });
+
 
 const syncOptions = { force: false };
+
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
@@ -71,7 +74,7 @@ if (process.env.NODE_ENV === "test") {
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(() => {
-  http.listen(PORT, () => {
+  app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
