@@ -45,7 +45,7 @@ $(document).ready(function() {
   // Submits a new post and brings user to blog page upon completion
   function submitPost(Post) {
     $.post("/api/newsfeed/", Post, function() {
-      window.location.href = "/dashboard";
+      window.location.href = "/";
     });
   }
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
       url: "/api/newsfeed",
       data: post
     }).then(function() {
-      window.location.href = "/dashboard";
+      window.location.href = "/";
     });
   }
 });
