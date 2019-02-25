@@ -2,19 +2,27 @@
 
 An app where users login to store their favorite comic heroes and/or villains to their vault of saved characters. Once logged in, the user can post news blogs, view saved characters and add new characters.
 
-*Future Development
-A battle game where two on-screen characters fight each other, logging the users' battle statistics with wins & losses. The user's wins and losses will be viewed on their ```User Profile``` page and if they land in the top 10, their profile will be loaded to the ```Leaderboard```.*
+### *Future Development*
+
+*A battle game where two on-screen characters fight each other, logging the users' battle statistics with wins & losses. The user's wins and losses will be viewed on their ```User Profile``` page and if they land in the top 10, their profile will be loaded to the ```Leaderboard```.*
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+Clone repository: In the command line ```git clone``` https://github.com/OscarG1991/Project2.git 
+
+GitHub link: [GitHub](https://github.com/OscarG1991/Project2)
+
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
-Give examples
+SEE ## Built With
+
+
 ```
 
 ### Installing
@@ -57,7 +65,7 @@ Give an example
 
 ## Deployment
 
-Heroku - ????
+Heroku - https://infinite-bastion-52064.herokuapp.com/
 
 ## Built With
 
@@ -90,9 +98,6 @@ Heroku - ????
 * [Prettier](https://www.npmjs.com/package/prettier)
 * [Socket.io](https://socket.io/get-started/chat/) - COMING SOON
 
-* [????](https://maven.apache.org/) - Dependency Management
-* [????](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
@@ -102,13 +107,12 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
-**Oscar Guillen** - *Despcription of Initial Work* - [Project2](https://github.com/Project2)
+**Oscar Guillen** - *Despcription of Initial Work* - [Project2](https://github.com/OscarG1991/Project2)
 
-**Carlo Fasioli** - *Description of Initial Work* - [Project2](https://github.com/Project2)
+**Carlo Fasioli** - *Description of Initial Work* - [Project2](https://github.com/OscarG1991/Project2)
 
-**Ben Vega** - *CSS and Materilize Framework, UI/UX* - [Project2](https://github.com/Project2)
+**Ben Vega** - *CSS and Materilize Framework, UI/UX* - [Project2](https://github.com/OscarG1991/Project2)
 
-See also list of [contributors](https://github.com/Project2/contributors)
 
 ## License
 
